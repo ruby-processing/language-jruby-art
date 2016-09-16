@@ -1,2 +1,3 @@
-# language-jruby-art
-JRubyArt snippets for atom
+# language-jruby-art package
+
+Simple sketch snippet (to be expanded?).

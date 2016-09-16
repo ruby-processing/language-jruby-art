@@ -1,0 +1,14 @@
+{
+  "name": "language-jruby-art",
+  "version": "0.0.0",
+  "description": "Sketch Snippets",
+  "keywords": [
+  ],
+  "repository": "https://github.com/atom/language-ruby",
+  "license": "MIT",
+  "engines": {
+    "atom": ">=1.0.0 <2.0.0"
+  },
+  "dependencies": {
+  }
+}

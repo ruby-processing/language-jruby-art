@@ -1,0 +1,16 @@
+'.source.ruby.processing':
+  Bare:
+    prefix: "bare"
+    body: '''
+      def settings
+        size $1, $2
+      end
+
+      def setup
+        sketch_title '$3'
+      end
+
+      def draw
+
+      end
+    '''
