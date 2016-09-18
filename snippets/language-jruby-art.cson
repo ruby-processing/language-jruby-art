@@ -13,7 +13,7 @@
       end
 
       def draw
-         ${4: string}
+         ${4:string}
       end
     ''',
 
@@ -27,4 +27,12 @@
     prefix: "los"
     body: '''
        load_shader(data_path('${1:string}.glsl'))
+    ''',
+
+  PushMatrix:
+    prefix: "pma"
+    body: '''
+      push_matrix
+      # write stuff here
+      pop_matrix
     '''
