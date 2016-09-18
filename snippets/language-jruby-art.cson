@@ -9,10 +9,22 @@
       end
 
       def setup
-        sketch_title '${3: string}'
+        sketch_title '${3:string}'
       end
 
       def draw
          ${4: string}
       end
+    ''',
+
+  Load_Image:
+    prefix: "loi"
+    body: '''
+       load_image(data_path('${1:string}'))
+    ''',
+
+  Load_Shader:
+    prefix: "los"
+    body: '''
+       load_shader(data_path('${1:string}.glsl'))
     '''
