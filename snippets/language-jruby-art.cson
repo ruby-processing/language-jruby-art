@@ -1,9 +1,14 @@
 '.source.ruby.processing':
+  Background:
+    prefix: "bkg"
+    body: '''
+       background ${1:int}
+    ''',
   Bare:
     prefix: "bare"
     body: '''
       def settings
-        size ${1: number}, ${2: number}
+        size ${1:int}, ${2:int}
         # pixel_density(2) # for HiDpi screens
         # smooth # see https://processing.org/reference/smooth_.html
       end
@@ -35,4 +40,9 @@
       push_matrix
       # write stuff here
       pop_matrix
+    ''',
+  Map1D:
+    prefix: "m1d"
+    body: '''
+      map1d(${1:string}, ${2:number}..${3:number}, ${4:number}..${5:number})
     '''
