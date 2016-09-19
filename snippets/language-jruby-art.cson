@@ -1,9 +1,7 @@
 '.source.ruby.processing':
   Background:
     prefix: "bkg"
-    body: '''
-       background ${1:int}
-    ''',
+    body: 'background ${1:int}',
   Bare:
     prefix: "bare"
     body: '''
@@ -24,15 +22,11 @@
 
   Load_Image:
     prefix: "loi"
-    body: '''
-       load_image(data_path('${1:string}'))
-    ''',
+    body: "load_image(data_path('${1:string}'))",
 
   Load_Shader:
     prefix: "los"
-    body: '''
-       load_shader(data_path('${1:string}.glsl'))
-    ''',
+    body: "load_shader(data_path('${1:string}.glsl'))",
 
   PushMatrix:
     prefix: "pma"
@@ -43,6 +37,4 @@
     ''',
   Map1D:
     prefix: "m1d"
-    body: '''
-      map1d(${1:string}, ${2:number}..${3:number}, ${4:number}..${5:number})
-    '''
+    body: 'map1d(${1:string}, ${2:number}..${3:number}, ${4:number}..${5:number})'
