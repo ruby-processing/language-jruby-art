@@ -1,3 +1,4 @@
 # language-jruby-art package
-Bare snippet in action:
-![animated](https://cloud.githubusercontent.com/assets/86850/18607317/97e1d102-7cc1-11e6-9302-719b633d8dd1.gif)
+`bare` and `bkg` snippets in action:
+![language](https://cloud.githubusercontent.com/assets/86850/18698393/e2f48376-7fc1-11e6-80a5-fa8e954bad03.gif)
+Best used in combination with atom-k9 package (here using menu, but `ctrl+alt_b` is quicker)
