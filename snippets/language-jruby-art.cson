@@ -2,6 +2,11 @@
   Background:
     prefix: "bkg"
     body: 'background ${1:int}',
+
+  web_colors_to_colors:
+    prefix: "web"
+    body: 'web_to_color_array(${1:string})',
+
   Bare:
     prefix: "bare"
     body: '''
@@ -35,6 +40,7 @@
       # write stuff here
       pop_matrix
     ''',
+
   Map1D:
     prefix: "m1d"
     body: 'map1d(${1:string}, ${2:number}..${3:number}, ${4:number}..${5:number})'
