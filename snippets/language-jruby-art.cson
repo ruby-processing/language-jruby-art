@@ -25,9 +25,61 @@
       end
     ''',
 
+  Propane_Sketch:
+    prefix: "prsk"
+    body: '''
+      require 'propane'
+
+      class ${1:string} < Propane::App
+        def settings
+          size ${2:int}, ${3:int}
+          # pixel_density(2) # for HiDpi screens
+          # smooth # see https://processing.org/reference/smooth_.html
+        end
+
+        def setup
+          sketch_title '${4:string}'
+        end
+
+        def draw
+           ${5:string}
+        end
+      end
+
+      ${1:string}.new
+    ''',
+
+  Degree_Cosine:
+    prefix: "dgcos"
+    body: "DegLut.cos(${1:any})",
+
+  Degree_Sine:
+    prefix: "dgsin"
+    body: "DegLut.sin(${1:any})",
+
+  Include_Package:
+    prefix: "incp"
+    body: "include_package '${1:string}'",
+
+  Load_Library:
+    prefix: "lol"
+    body: "load_library :${1:string}",
+
+  Load_Libraries:
+    prefix: "lols"
+    body: "load_libraries :${1:string}, :${2:string}",
+
   Load_Image:
     prefix: "loi"
     body: "load_image(data_path('${1:string}'))",
+
+  Request_Image:
+    prefix: "rqi"
+    body: "request_image(data_path('${1:string}'))",
+
+  Load_Font:
+    prefix: "lof"
+    body: "load_font(data_path('${1:string}'))",
 
   Load_Shader:
     prefix: "los"
