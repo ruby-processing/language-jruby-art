@@ -57,6 +57,46 @@
     prefix: "dgsin"
     body: "DegLut.sin(${1:any})",
 
+  mouse_x:
+    prefix: "msx"
+    body: "mouse_x",
+
+  mouse_y:
+    prefix: "msy"
+    body: "mouse_y",
+
+  pmouse_x:
+    prefix: "pmsx"
+    body: "pmouse_x",
+
+  pmouse_y:
+    prefix: "pmsy"
+    body: "pmouse_y",
+
+  key_pressed_var:
+    prefix: "kp?"
+    body: "key_pressed?",
+
+  mouse_pressed_var:
+    prefix: "mp?"
+    body: "mouse_pressed?",
+
+  key_pressed_method:
+    prefix: "kpm"
+    body: '''
+      def key_pressed
+        ${1:string}
+      end
+    ''',
+
+  mouse_pressed_method:
+    prefix: "mpm"
+    body: '''
+      def mouse_pressed
+        ${1:string}
+      end
+    ''',       
+
   Include_Package:
     prefix: "incp"
     body: "include_package '${1:string}'",
