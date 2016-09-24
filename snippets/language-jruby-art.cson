@@ -28,6 +28,7 @@
   Propane_Sketch:
     prefix: "prsk"
     body: '''
+      #!/usr/bin/env jruby
       require 'propane'
 
       class ${1:string} < Propane::App
@@ -95,7 +96,7 @@
       def mouse_pressed
         ${1:string}
       end
-    ''',       
+    ''',
 
   Include_Package:
     prefix: "incp"
