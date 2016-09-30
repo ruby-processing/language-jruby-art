@@ -1,14 +1,14 @@
 '.source.ruby.processing':
   Background:
-    prefix: "bkg"
-    body: 'background ${1:int}',
+    prefix: 'bkg'
+    body: 'background ${1:int}'
 
   web_colors_to_colors:
-    prefix: "web"
-    body: 'web_to_color_array(${1:string})',
+    prefix: 'web'
+    body: 'web_to_color_array(${1:string})'
 
   Bare:
-    prefix: "bare"
+    prefix: 'bare'
     body: '''
       def settings
         size ${1:int}, ${2:int}
@@ -23,10 +23,10 @@
       def draw
          ${4:string}
       end
-    ''',
+    '''
 
   Propane_Sketch:
-    prefix: "prsk"
+    prefix: 'prsk'
     body: '''
       #!/usr/bin/env jruby
       require 'propane'
@@ -48,92 +48,113 @@
       end
 
       ${1:string}.new
-    ''',
+    '''
+
+
+  ArcBall:
+    prefix: 'arcball'
+    body: 'ArcBall.init(self)'
+
+  Ellipse:
+    prefix: 'ellipse'
+    body: 'ellipse(${1:any}, ${2:any}, ${3:any}, ${4:any})'
+
+  Line:
+    prefix: 'line'
+    body: 'line(${1:any}, ${2:any}, ${3:any}, ${4:any})'
+
+  Rect:
+    prefix: 'rect'
+    body: 'rect(${1:any}, ${2:any}, ${3:any}, ${4:any})'
 
   Degree_Cosine:
-    prefix: "dgcos"
-    body: "DegLut.cos(${1:any})",
+    prefix: 'dgcos'
+    body: 'DegLut.cos(${1:any})'
 
   Degree_Sine:
-    prefix: "dgsin"
-    body: "DegLut.sin(${1:any})",
+    prefix: 'dgsin'
+    body: 'DegLut.sin(${1:any})'
 
   mouse_x:
-    prefix: "msx"
-    body: "mouse_x",
+    prefix: 'msx'
+    body: 'mouse_x'
 
   mouse_y:
-    prefix: "msy"
-    body: "mouse_y",
+    prefix: 'msy'
+    body: 'mouse_y'
 
   pmouse_x:
-    prefix: "pmsx"
-    body: "pmouse_x",
+    prefix: 'pmsx'
+    body: 'pmouse_x'
 
   pmouse_y:
-    prefix: "pmsy"
-    body: "pmouse_y",
-
-  key_pressed_var:
-    prefix: "kp?"
-    body: "key_pressed?",
-
-  mouse_pressed_var:
-    prefix: "mp?"
-    body: "mouse_pressed?",
+    prefix: 'pmsy'
+    body: 'pmouse_y'
 
   key_pressed_method:
-    prefix: "kpm"
+    prefix: 'kpm'
     body: '''
       def key_pressed
         ${1:string}
       end
-    ''',
+    '''
+
+  key_pressed_var:
+    prefix: 'kp?'
+    body: 'key_pressed?'
+
+  mouse_pressed_var:
+    prefix: 'mp?'
+    body: 'mouse_pressed?'
 
   mouse_pressed_method:
-    prefix: "mpm"
+    prefix: 'mpm'
     body: '''
       def mouse_pressed
         ${1:string}
       end
-    ''',
+    '''
 
   Include_Package:
-    prefix: "incp"
-    body: "include_package '${1:string}'",
+    prefix: 'incp'
+    body: "include_package '${1:string}'"
 
   Load_Library:
-    prefix: "lol"
-    body: "load_library :${1:string}",
+    prefix: 'lol'
+    body: 'load_library :${1:string}'
 
   Load_Libraries:
-    prefix: "lols"
-    body: "load_libraries :${1:string}, :${2:string}",
+    prefix: 'lols'
+    body: 'load_libraries :${1:string}, :${2:string}'
 
   Load_Image:
-    prefix: "loi"
-    body: "load_image(data_path('${1:string}'))",
+    prefix: 'loi'
+    body: "load_image(data_path('${1:string}'))"
 
   Request_Image:
-    prefix: "rqi"
-    body: "request_image(data_path('${1:string}'))",
+    prefix: 'rqi'
+    body: "request_image(data_path('${1:string}'))"
 
   Load_Font:
-    prefix: "lof"
-    body: "load_font(data_path('${1:string}'))",
+    prefix: 'lof'
+    body: "load_font(data_path('${1:string}'))"
 
   Load_Shader:
-    prefix: "los"
-    body: "load_shader(data_path('${1:string}.glsl'))",
+    prefix: 'los'
+    body: "load_shader(data_path('${1:string}.glsl'))"
 
   PushMatrix:
-    prefix: "pma"
+    prefix: 'pma'
     body: '''
       push_matrix
       # write stuff here
       pop_matrix
-    ''',
+    '''
 
   Map1D:
-    prefix: "m1d"
+    prefix: 'm1d'
     body: 'map1d(${1:string}, ${2:number}..${3:number}, ${4:number}..${5:number})'
+
+  Constrained_Map:
+    prefix: 'constrain_map'
+    body: 'constrained_map(${1:string}, ${2:number}..${3:number}, ${4:number}..${5:number})'
