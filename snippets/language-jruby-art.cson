@@ -2,11 +2,13 @@
   Background:
     prefix: 'bkg'
     body: 'background ${1:int}'
+    description: 'Method expects one argument'
+    descriptionMoreURL: 'https://atom.io/packages/language-jruby-art'
 
   web_colors_to_colors:
     prefix: 'web'
     body: 'web_to_color_array(${1:string})'
-
+    description: 'Method expects array of String'
   Bare:
     prefix: 'bare'
     body: '''
@@ -24,6 +26,8 @@
          ${4:string}
       end
     '''
+    description: 'A bare sketch template'
+    descriptionMoreURL: 'https://atom.io/packages/language-jruby-art'
 
   Propane_Sketch:
     prefix: 'prsk'
@@ -49,7 +53,8 @@
 
       ${1:string}.new
     '''
-
+    description: 'Creates a propane sketch'
+    descriptionMoreURL: 'https://ruby-processing.github.io/propane/atom-propane/'
 
   ArcBall:
     prefix: 'arcball'
@@ -151,6 +156,10 @@
       pop_matrix
     '''
 
+  Constrain:
+    prefix: 'constrain'
+    body: 'constrain(${1:any}, ${2:any}, ${3:any})'
+
   Map1D:
     prefix: 'm1d'
     body: 'map1d(${1:string}, ${2:number}..${3:number}, ${4:number}..${5:number})'
@@ -158,3 +167,11 @@
   Constrained_Map:
     prefix: 'constrain_map'
     body: 'constrained_map(${1:string}, ${2:number}..${3:number}, ${4:number}..${5:number})'
+
+  Norm:
+    prefix: 'norm'
+    body: 'norm(${1:any}, ${2:any}, ${3:any})'
+
+  Norm_Strict:
+    prefix: 'strict'
+    body: 'norm_strict(${1:any}, ${2:any}, ${3:any})'
