@@ -4,11 +4,14 @@
     body: 'background ${1:int}'
     description: 'Method expects one argument'
     descriptionMoreURL: 'https://atom.io/packages/language-jruby-art'
+    rightLabelHTML: '<span style="color:#9B111E">JRA</span>'
 
   web_colors_to_colors:
     prefix: 'web'
     body: 'web_to_color_array(${1:string})'
     description: 'Method expects array of String'
+    rightLabelHTML: '<span style="color:#9B111E">JRA</span>'
+
   Bare:
     prefix: 'bare'
     body: '''
@@ -28,6 +31,7 @@
     '''
     description: 'A bare sketch template'
     descriptionMoreURL: 'https://atom.io/packages/language-jruby-art'
+    rightLabelHTML: '<span style="color:#9B111E">JRA</span>'
 
   Propane_Sketch:
     prefix: 'prsk'
@@ -55,46 +59,63 @@
     '''
     description: 'Creates a propane sketch'
     descriptionMoreURL: 'https://ruby-processing.github.io/propane/atom-propane/'
+    rightLabelHTML: '<span style="color:#9B111E">JRA</span>'
 
   ArcBall:
     prefix: 'arcball'
     body: 'ArcBall.init(self)'
+    description: 'Add arcball functionality'
+    rightLabelHTML: '<span style="color:#9B111E">JRA</span>'
 
   Ellipse:
     prefix: 'ellipse'
     body: 'ellipse(${1:any}, ${2:any}, ${3:any}, ${4:any})'
+    description: 'ellipse loc.x, loc.y, width, height'
+    rightLabelHTML: '<span style="color:#9B111E">JRA</span>'
 
   Line:
     prefix: 'line'
     body: 'line(${1:any}, ${2:any}, ${3:any}, ${4:any})'
+    rightLabelHTML: '<span style="color:#9B111E">JRA</span>'
 
   Rect:
     prefix: 'rect'
     body: 'rect(${1:any}, ${2:any}, ${3:any}, ${4:any})'
+    rightLabelHTML: '<span style="color:#9B111E">JRA</span>'
 
   Degree_Cosine:
     prefix: 'dgcos'
     body: 'DegLut.cos(${1:any})'
+    description: 'degree cosine lut'
+    rightLabelHTML: '<span style="color:#9B111E">JRA</span>'
 
   Degree_Sine:
     prefix: 'dgsin'
     body: 'DegLut.sin(${1:any})'
+    description: 'degree sine lut'
+    rightLabelHTML: '<span style="color:#9B111E">JRA</span>'
 
   mouse_x:
     prefix: 'msx'
     body: 'mouse_x'
+    rightLabelHTML: '<span style="color:#9B111E">JRA</span>'
 
   mouse_y:
     prefix: 'msy'
     body: 'mouse_y'
+    rightLabelHTML: '<span style="color:#9B111E">JRA</span>'
 
   pmouse_x:
     prefix: 'pmsx'
     body: 'pmouse_x'
+    description: 'previous mouse_x'
+    rightLabelHTML: '<span style="color:#9B111E">JRA</span>'
 
   pmouse_y:
     prefix: 'pmsy'
     body: 'pmouse_y'
+    description: 'previous mouse_y'
+    rightLabelHTML: '<span style="color:#9B111E">JRA</span>'
 
   key_pressed_method:
     prefix: 'kpm'
@@ -103,14 +124,17 @@
         ${1:string}
       end
     '''
+    rightLabelHTML: '<span style="color:#9B111E">JRA</span>'
 
   key_pressed_var:
     prefix: 'kp?'
     body: 'key_pressed?'
+    rightLabelHTML: '<span style="color:#9B111E">JRA</span>'
 
   mouse_pressed_var:
     prefix: 'mp?'
     body: 'mouse_pressed?'
+    rightLabelHTML: '<span style="color:#9B111E">JRA</span>'
 
   mouse_pressed_method:
     prefix: 'mpm'
@@ -119,6 +143,7 @@
         ${1:string}
       end
     '''
+    rightLabelHTML: '<span style="color:#9B111E">JRA</span>'
 
   Include_Package:
     prefix: 'incp'
@@ -127,22 +152,30 @@
   Load_Library:
     prefix: 'lol'
     body: 'load_library :${1:string}'
+    description: 'load single library'
+    rightLabelHTML: '<span style="color:#9B111E">JRA</span>'
 
   Load_Libraries:
     prefix: 'lols'
     body: 'load_libraries :${1:string}, :${2:string}'
+    description: 'load list of libraries'
+    rightLabelHTML: '<span style="color:#9B111E">JRA</span>'
 
   Load_Image:
     prefix: 'loi'
     body: "load_image(data_path('${1:string}'))"
+    description: 'load image from data path'
+    rightLabelHTML: '<span style="color:#9B111E">JRA</span>'
 
   Request_Image:
     prefix: 'rqi'
     body: "request_image(data_path('${1:string}'))"
+    description: 'asynchronous load image from data path'
 
   Load_Font:
     prefix: 'lof'
     body: "load_font(data_path('${1:string}'))"
+    rightLabelHTML: '<span style="color:#9B111E">JRA</span>'
 
   Load_Shader:
     prefix: 'los'
@@ -155,23 +188,42 @@
       # write stuff here
       pop_matrix
     '''
+    rightLabelHTML: '<span style="color:#9B111E">JRA</span>'
 
   Constrain:
     prefix: 'constrain'
     body: 'constrain(${1:any}, ${2:any}, ${3:any})'
+    rightLabelHTML: '<span style="color:#9B111E">JRA</span>'
 
   Map1D:
     prefix: 'm1d'
     body: 'map1d(${1:string}, ${2:number}..${3:number}, ${4:number}..${5:number})'
+    description: 'Replaces `processing` map'
+    rightLabelHTML: '<span style="color:#9B111E">JRA</span>'
+
+  Vec2D:
+    prefix: 'v2'
+    body: 'Vec2D.new(${1:any}, ${2:any})'
+    description: 'Replaces PVector 2D'
+    rightLabelHTML: '<span style="color:#9B111E">JRA</span>'
+
+  Vec3D:
+    prefix: 'v3'
+    body: 'Vec3D.new(${1:any}, ${2:any}, ${2:any})'
+    description: 'Replaces PVector 3D'
+    rightLabelHTML: '<span style="color:#9B111E">JRA</span>'
 
   Constrained_Map:
     prefix: 'constrain_map'
     body: 'constrained_map(${1:string}, ${2:number}..${3:number}, ${4:number}..${5:number})'
+    rightLabelHTML: '<span style="color:#9B111E">JRA</span>'
 
   Norm:
     prefix: 'norm'
     body: 'norm(${1:any}, ${2:any}, ${3:any})'
+    rightLabelHTML: '<span style="color:#9B111E">JRA</span>'
 
   Norm_Strict:
     prefix: 'strict'
     body: 'norm_strict(${1:any}, ${2:any}, ${3:any})'
+    rightLabelHTML: '<span style="color:#9B111E">JRA</span>'
